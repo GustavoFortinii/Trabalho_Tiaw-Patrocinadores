@@ -1,0 +1,248 @@
+body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 20px 0;
+      text-align: center;
+    }
+    select {
+      margin: 10px 0;
+      padding: 5px;
+      font-size: 1em;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 800px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: relative;
+      
+    }
+    .top-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .top-section h2 {
+      font-size: 1.5em;
+      margin: 0 20px 0 0;
+    }
+    .logo-circle {
+      width: 100px;
+      height: 100px;
+      background-color: #e0e0e0;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .description {
+      flex: 1;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    .sponsor-boxes {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .box {
+      width: 30%;
+      height: 100px;
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .box:hover {
+      background-color: #d0d0d0;
+    }
+    .box img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    :root{
+    --red: #C8102E;
+    --blue: #1D428A;
+    --gray: #D0D0D0;
+    --white: #FFFFFF;
+
+}
+
+*{
+    font-family: "Inter", sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+body {
+    margin: 0;
+}
+
+/* Footer */
+
+.footer{
+    position: relative;
+    top: 4rem;
+    background-color: var(--blue);
+    color: white;
+    font-size: large;
+    height: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+   position: relative;
+   right: 6.2rem;
+}
+.footer .footer-information, .footer-navigation{
+    width: 40%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-information{
+   justify-content: space-between;
+}
+
+.footer .footer-information .logo{
+    width: 46%;
+}
+
+.footer .footer-information .logo .title{
+    margin: 0;
+}
+
+.footer .footer-information .project-information {
+    width: 40%;
+    height:24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer .footer-information .project-information .social-media{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .footer-information .project-information .social-media .yt{
+    width: 40px;
+}
+
+.footer .footer-information .project-information .social-media .insta{
+    width: 35px;
+}
+
+.footer .footer-information .project-information .social-media .ttk{
+    width: 33px;
+}
+
+.footer .footer-navigation{
+    display: grid;
+    grid-template-areas: 
+    "navigation logo"
+    "newsletter logo";
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.footer .footer-navigation > div.nav{
+    grid-area: navigation;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: large;
+}
+
+.footer .footer-navigation > div.nav ul{
+    padding: 0px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    margin: 0;
+}
+
+.footer .footer-navigation .nav ul li{
+    list-style-type: none;
+}
+
+.footer .footer-navigation > div.newsletter{
+    grid-area: newsletter;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.footer .footer-navigation .newsletter .input-section{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer .footer-navigation .newsletter .input-section .input {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer .footer-navigation .newsletter .input-section .input input {
+    height: 95%;
+    width: 75%;
+    border-radius: 25px 0 0 25px;
+    border: none;
+    display: flex;
+}
+
+.footer .footer-navigation .newsletter .input-section .input button{
+    height: 100%;
+    width: 25%;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: large;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.footer .footer-navigation .newsletter .input-section .input button:hover{
+    background-color: #e80d32;
+}
+
+.footer .footer-navigation > div.nba-logo{
+    grid-area: logo;
+    overflow: hidden;
+    text-align: center;
+}
+
+.footer .footer-navigation > div.nba-logo img{
+    height: 100%;
+    border-radius: 25px;
+}
