@@ -20,34 +20,7 @@ const leaguesData = {
               "name": "State Farm",
               "details": "Patrocinadora oficial de seguros, nomeia o 'State Farm All-Star Saturday Night' e tem forte presença em anúncios durante jogos e playoffs."
             },
-            {
-              "name": "American Express",
-              "details": "Oferece benefícios exclusivos para clientes durante eventos como playoffs e All-Star Game, com ativações para público premium."
-            },
-            {
-              "name": "Tissot",
-              "details": "Fornecedora oficial de relógios, responsável pelos cronômetros dos jogos, associada à precisão e estilo."
-            },
-            {
-              "name": "AT&T",
-              "details": "Empresa de telecomunicações com ampla presença em comerciais e eventos, fornecendo conectividade para a liga."
-            },
-            {
-              "name": "Socios.com, Toyota, Verizon",
-              "details": "Cada uma com 20 contratos de patrocínio, dominam setores como tecnologia e automotivo, com ativações em arenas e transmissões."
-            },
-            {
-              "name": "Budweiser, Gatorade, Hellmann’s, Ruffles, Sadia, XP Inc.",
-              "details": "No Brasil, patrocinam a NBA House, evento que atrai jovens e reforça a presença da liga no terceiro maior mercado global."
-            },
-            {
-              "name": "Alibaba",
-              "details": "Investe em jogadores como Kobe Bryant e possui 51% do Brooklyn Nets, reforçando sua influência no basquete."
-            },
-            {
-              "name": "FTX",
-              "details": "Antes de sua falência, investiu US$ 100 milhões no Golden State Warriors, mostrando o interesse do setor de criptomoedas."
-            }
+            
           ],
           "influential_sectors": {
             "Bebidas e Alimentação": "21%",
@@ -76,10 +49,7 @@ const leaguesData = {
               "name": "Heineken",
               "details": "Presença constante em eventos e anúncios, especialmente em mercados europeus onde a cerveja é culturalmente relevante."
             },
-            {
-              "name": "Spalding",
-              "details": "Fornecedora oficial de bolas de basquete, essencial para a identidade da liga."
-            }
+          
           ],
           "influential_sectors": {
             "Avição": "Alta relevância",
@@ -107,14 +77,7 @@ const leaguesData = {
               "name": "BMG Banco",
               "details": "Patrocinador máster, com exposição em todas as quadras e campanhas de mídia."
             },
-            {
-              "name": "Nike e Peak",
-              "details": "Fornecem uniformes e materiais esportivos, com destaque para times de elite como Flamengo."
-            },
-            {
-              "name": "Empresas de iGaming",
-              "details": "Setor emergente, com plataformas de apostas patrocinando times e eventos, aproveitando a popularidade do NBB."
-            }
+            
           ],
           "influential_sectors": {
             "Serviços Financeiros": "Alta relevância",
@@ -127,32 +90,46 @@ const leaguesData = {
     };
 
     let currentLeagueIndex = 0;
+    let currentSponsorIndex = 0;
 
-    function updateSponsors() {
+    function updateDisplay() {
       currentLeagueIndex = document.getElementById('leagueSelect').value;
       const league = leaguesData.leagues[currentLeagueIndex];
-      
-      
-      const topSponsor = league.sponsors[0];
-      const descriptionElement = document.getElementById('sponsorDescription');
-      descriptionElement.innerHTML = `
-        <strong>${topSponsor.name}</strong><br>
-        ${topSponsor.details}
-      `;
-      
+      document.querySelector('.header h1').textContent = `Patrocinadores - ${league.name}`;
+      currentSponsorIndex = 0; // Reseta para o primeiro patrocinador ao trocar de liga
+      updateSponsors();
     }
 
-    function showSponsorDetails(sponsorIndex) {
+    function updateSponsors() {
       const league = leaguesData.leagues[currentLeagueIndex];
-      const sponsor = league.sponsors[sponsorIndex];
-      if (sponsor) {
-        const descriptionElement = document.getElementById('sponsorDescription');
-        descriptionElement.innerHTML = `
-          <strong>${sponsor.name}</strong><br>
-          ${sponsor.details}
-        `;
+      const topSponsor = document.getElementById('topSponsor');
+      const topSponsorDetails = document.getElementById('topSponsorDetails');
+      const sponsorGrid = document.getElementById('sponsorGrid');
+
+      // Atualiza o Top 1
+      topSponsorDetails.innerHTML = `<strong>${league.sponsors[currentSponsorIndex].name}</strong><br>${league.sponsors[currentSponsorIndex].details}`;
+
+      // Cria a grade de patrocinadores (excluindo o atual Top 1)
+      sponsorGrid.innerHTML = '';
+      for (let i = 0; i < 3 && i + currentSponsorIndex + 1 < league.sponsors.length; i++) {
+        const item = document.createElement('div');
+        item.className = 'sponsor-item';
+        item.textContent = league.sponsors[currentSponsorIndex + i + 1].name;
+        item.onclick = () => cycleToSponsor(currentSponsorIndex + i + 1);
+        sponsorGrid.appendChild(item);
       }
     }
 
-  
-    updateSponsors();
+    function cycleSponsor() {
+      const league = leaguesData.leagues[currentLeagueIndex];
+      currentSponsorIndex = (currentSponsorIndex + 1) % league.sponsors.length;
+      updateSponsors();
+    }
+
+    function cycleToSponsor(index) {
+      currentSponsorIndex = index;
+      updateSponsors();
+    }
+
+    // Inicializa a exibição com a NBA
+    updateDisplay();

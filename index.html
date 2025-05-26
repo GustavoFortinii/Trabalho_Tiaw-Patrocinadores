@@ -1,35 +1,28 @@
-
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patrocinadores de Ligas de Basquete</title>
-  
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 <body>
-  <h1>Patrocinadores</h1>
-  <select id="leagueSelect" onchange="updateSponsors()">
-    <option value="0">NBA (National Basketball Association)</option>
-    <option value="1">EuroLeague</option>
-    <option value="2">NBB (Novo Basquete Brasil)</option>
-  </select>
+  <body>
   <div class="container">
-    <div class="top-section">
-      <div class="logo-circle"></div>
-      <div class="description" id="sponsorDescription"></div>
+    <div class="header">
+      <h1>Patrocinadores</h1>
+      <select class="league-select" id="leagueSelect" onchange="updateDisplay()">
+        <option value="0">NBA</option>
+        <option value="1">Euroliga</option>
+        <option value="2">NBB</option>
+      </select>
     </div>
-    <div class="sponsor-boxes">
-      <div class="box" onclick="showSponsorDetails(1)">
-        <img id="sponsorBox1" src="" alt="">
-      </div>
-      <div class="box" onclick="showSponsorDetails(2)">
-        <img id="sponsorBox2" src="" alt="">
-      </div>
-      <div class="box" onclick="showSponsorDetails(3)">
-        <img id="sponsorBox3" src="" alt="">
-      </div>
+    <div class="top-sponsor" id="topSponsor" onclick="cycleSponsor()">
+      <h2>Top 1</h2>
+      <div class="circle"></div>
+      <p id="topSponsorDetails"></p>
     </div>
+    <div class="sponsor-grid" id="sponsorGrid"></div>
   </div>
    <footer class="footer">
         <div class="footer-information">
@@ -78,11 +71,10 @@
                 </div>
             </div>
             <div class="nba-logo">
-                <img src="nba-logo.png" alt="NBA Logo">
+                <img src="imgs/nba-logo.png" alt="NBA Logo">
             </div>
         </div>
     </footer>
-
- <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
