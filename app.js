@@ -6,7 +6,8 @@ const leaguesData = {
           "sponsors": [
             {
               "name": "Nike",
-              "details": "Fornecedora oficial de uniformes desde 2017, com contratos vitalícios com estrelas como LeBron James, Kevin Durant e Michael Jordan (linha Air Jordan). Central na moda e cultura pop do basquete."
+              "details": "Fornecedora oficial de uniformes desde 2017, com contratos vitalícios com estrelas como LeBron James, Kevin Durant e Michael Jordan (linha Air Jordan). Central na moda e cultura pop do basquete.",
+              "imagem": "imgs/nike.png"
             },
             {
               "name": "Coca-Cola",
