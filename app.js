@@ -1,94 +1,103 @@
 const leaguesData = {
-      "leagues": [
+  "leagues": [
+    {
+      "name": "NBA (National Basketball Association)",
+      "description": "A liga de basquete mais assistida do mundo, com faturamento de patrocínios de US$ 1,66 bilhão na temporada 2022/2023, crescendo 1,3% no ano seguinte.",
+      "sponsors": [
         {
-          "name": "NBA (National Basketball Association)",
-          "description": "A liga de basquete mais assistida do mundo, com faturamento de patrocínios de US$ 1,66 bilhão na temporada 2022/2023, crescendo 1,3% no ano seguinte.",
-          "sponsors": [
-            {
-              "name": "Nike",
-              "details": "Fornecedora oficial de uniformes desde 2017, com contratos vitalícios com estrelas como LeBron James, Kevin Durant e Michael Jordan (linha Air Jordan). Central na moda e cultura pop do basquete.",
-              "imagem": "imgs/nike.png"
-            },
-            {
-              "name": "Coca-Cola",
-              "details": "Parceira de longa data, promove marcas como Sprite e Powerade em campanhas publicitárias e eventos como o All-Star Game."
-            },
-            {
-              "name": "PepsiCo",
-              "details": "Concorrente da Coca-Cola, destaca-se com Gatorade, Mountain Dew e Pepsi, criando conteúdo para engajar fãs."
-            },
-            {
-              "name": "State Farm",
-              "details": "Patrocinadora oficial de seguros, nomeia o 'State Farm All-Star Saturday Night' e tem forte presença em anúncios durante jogos e playoffs."
-            },
-            
-          ],
-          "influential_sectors": {
-            "Bebidas e Alimentação": "21%",
-            "Serviços Financeiros": "14%",
-            "Tecnologia": "US$ 122 milhões",
-            "Saúde": "US$ 105 milhões"
-          }
+          "name": "Nike",
+          "details": "Fornecedora oficial de uniformes desde 2017, com contratos vitalícios com estrelas como LeBron James, Kevin Durant e Michael Jordan (linha Air Jordan). Central na moda e cultura pop do basquete.",
+          "imagem": "imgs/nike-logo.png"
         },
         {
-          "name": "EuroLeague",
-          "description": "Principal liga de basquete da Europa, com clubes de elite como Real Madrid e Barcelona. Menos visibilidade global que a NBA, mas com foco em mercados regionais.",
-          "sponsors": [
-            {
-              "name": "Turkish Airlines",
-              "details": "Patrocinadora principal, dá nome à competição (Turkish Airlines EuroLeague) desde 2010, com forte presença em arenas e transmissões."
-            },
-            {
-              "name": "Adidas",
-              "details": "Fornece uniformes e equipamentos para times e eventos, competindo com a Nike no mercado europeu."
-            },
-            {
-              "name": "Bet365 e outras empresas de apostas",
-              "details": "Marcas de apostas esportivas em crescimento, com ativações digitais e promoções durante jogos."
-            },
-            {
-              "name": "Heineken",
-              "details": "Presença constante em eventos e anúncios, especialmente em mercados europeus onde a cerveja é culturalmente relevante."
-            },
-          
-          ],
-          "influential_sectors": {
-            "Avição": "Alta relevância",
-            "Apostas Esportivas": "Em crescimento",
-            "Marcas Esportivas": "Forte presença"
-          }
+          "name": "Coca-Cola",
+          "details": "Parceira de longa data, promove marcas como Sprite e Powerade em campanhas publicitárias e eventos como o All-Star Game.",
+          "imagem": "imgs/coca-cola-logo.png"
         },
         {
-          "name": "NBB (Novo Basquete Brasil)",
-          "description": "Principal liga brasileira, com 58 milhões de fãs e crescente apelo comercial. A LNB oferece plataformas de marketing personalizadas para marcas.",
-          "sponsors": [
-            {
-              "name": "Caixa e Banco do Brasil",
-              "details": "Bancos tradicionais que patrocinam times como Flamengo e Franca, com exposição em uniformes e quadras."
-            },
-            {
-              "name": "Brahma",
-              "details": "Marca de cerveja com forte presença em jogos, anúncios e ativações, como promoções em ginásios."
-            },
-            {
-              "name": "Ipanema",
-              "details": "Farmácia com visibilidade em quadras e eventos, focada no público local."
-            },
-            {
-              "name": "BMG Banco",
-              "details": "Patrocinador máster, com exposição em todas as quadras e campanhas de mídia."
-            },
-            
-          ],
-          "influential_sectors": {
-            "Serviços Financeiros": "Alta relevância",
-            "Bebidas": "Forte presença",
-            "iGaming": "Em crescimento"
-          },
-          "impact": "97% dos fãs do NBB compraram produtos de patrocinadores nos últimos seis meses, mostrando forte retorno para as marcas."
+          "name": "PepsiCo",
+          "details": "Concorrente da Coca-Cola, destaca-se com Gatorade, Mountain Dew e Pepsi, criando conteúdo para engajar fãs.",
+          "imagem": "imgs/pepsico-logo.png"
+        },
+        {
+          "name": "State Farm",
+          "details": "Patrocinadora oficial de seguros, nomeia o 'State Farm All-Star Saturday Night' e tem forte presença em anúncios durante jogos e playoffs.",
+          "imagem": "imgs/statefarm-logo.png"
         }
-      ]
-    };
+      ],
+      "influential_sectors": {
+        "Bebidas e Alimentação": "21%",
+        "Serviços Financeiros": "14%",
+        "Tecnologia": "US$ 122 milhões",
+        "Saúde": "US$ 105 milhões"
+      }
+    },
+    {
+      "name": "EuroLeague",
+      "description": "Principal liga de basquete da Europa, com clubes de elite como Real Madrid e Barcelona. Menos visibilidade global que a NBA, mas com foco em mercados regionais.",
+      "sponsors": [
+        {
+          "name": "Turkish Airlines",
+          "details": "Patrocinadora principal, dá nome à competição (Turkish Airlines EuroLeague) desde 2010, com forte presença em arenas e transmissões.",
+          "imagem": "imgs/turkish-airlines-logo.png"
+        },
+        {
+          "name": "Adidas",
+          "details": "Fornece uniformes e equipamentos para times e eventos, competindo com a Nike no mercado europeu.",
+          "imagem": "imgs/adidas-logo.png"
+        },
+        {
+          "name": "Bet365",
+          "details": "Marcas de apostas esportivas em crescimento, com ativações digitais e promoções durante jogos.",
+          "imagem": "imgs/bet365-logo.png"
+        },
+        {
+          "name": "Heineken",
+          "details": "Presença constante em eventos e anúncios, especialmente em mercados europeus onde a cerveja é culturalmente relevante.",
+          "imagem": "imgs/heineken-logo.png"
+        }
+      ],
+      "influential_sectors": {
+        "Avição": "Alta relevância",
+        "Apostas Esportivas": "Em crescimento",
+        "Marcas Esportivas": "Forte presença"
+      }
+    },
+    {
+      "name": "NBB (Novo Basquete Brasil)",
+      "description": "Principal liga brasileira, com 58 milhões de fãs e crescente apelo comercial. A LNB oferece plataformas de marketing personalizadas para marcas.",
+      "sponsors": [
+        {
+          "name": "Caixa e Banco do Brasil",
+          "details": "Bancos tradicionais que patrocinam times como Flamengo e Franca, com exposição em uniformes e quadras.",
+          "imagem": "imgs/caixa-bb-logo.png"
+        },
+        {
+          "name": "Brahma",
+          "details": "Marca de cerveja com forte presença em jogos, anúncios e ativações, como promoções em ginásios.",
+          "imagem": "imgs/brahma-logo.png"
+        },
+        {
+          "name": "Ipanema",
+          "details": "Farmácia com visibilidade em quadras e eventos, focada no público local.",
+          "imagem": "imgs/ipanema-logo.png"
+        },
+        {
+          "name": "BMG Banco",
+          "details": "Patrocinador máster, com exposição em todas as quadras e campanhas de mídia.",
+          "imagem": "imgs/bmg-logo.png"
+        }
+      ],
+      "influential_sectors": {
+        "Serviços Financeiros": "Alta relevância",
+        "Bebidas": "Forte presença",
+        "iGaming": "Em crescimento"
+      },
+      "impact": "97% dos fãs do NBB compraram produtos de patrocinadores nos últimos seis meses, mostrando forte retorno para as marcas."
+    }
+  ]
+};
+
 
     let currentLeagueIndex = 0;
     let currentSponsorIndex = 0;
@@ -102,24 +111,34 @@ const leaguesData = {
     }
 
     function updateSponsors() {
-      const league = leaguesData.leagues[currentLeagueIndex];
-      const topSponsor = document.getElementById('topSponsor');
-      const topSponsorDetails = document.getElementById('topSponsorDetails');
-      const sponsorGrid = document.getElementById('sponsorGrid');
+  const league = leaguesData.leagues[currentLeagueIndex];
+  const topSponsor = document.getElementById('topSponsor');
+  const topSponsorDetails = document.getElementById('topSponsorDetails');
+  const sponsorGrid = document.getElementById('sponsorGrid');
 
-      // Atualiza o Top 1
-      topSponsorDetails.innerHTML = `<strong>${league.sponsors[currentSponsorIndex].name}</strong><br>${league.sponsors[currentSponsorIndex].details}`;
+  const sponsor = league.sponsors[currentSponsorIndex];
 
-      // Cria a grade de patrocinadores (excluindo o atual Top 1)
-      sponsorGrid.innerHTML = '';
-      for (let i = 0; i < 3 && i + currentSponsorIndex + 1 < league.sponsors.length; i++) {
-        const item = document.createElement('div');
-        item.className = 'sponsor-item';
-        item.textContent = league.sponsors[currentSponsorIndex + i + 1].name;
-        item.onclick = () => cycleToSponsor(currentSponsorIndex + i + 1);
-        sponsorGrid.appendChild(item);
-      }
-    }
+ 
+  topSponsorDetails.innerHTML = `
+    <strong>${sponsor.name}</strong><br>
+    ${sponsor.details}
+    ${sponsor.imagem ? `<br><img src="${sponsor.imagem}" alt="${sponsor.name}" style="max-width: 200px; margin-top: 10px;">` : ''}
+  `;
+
+  // Cria a grade de patrocinadores (excluindo o atual Top 1)
+  sponsorGrid.innerHTML = '';
+  for (let i = 0; i < 3 && i + currentSponsorIndex + 1 < league.sponsors.length; i++) {
+    const item = document.createElement('div');
+    item.className = 'sponsor-item';
+    const sponsorItem = league.sponsors[currentSponsorIndex + i + 1];
+    item.innerHTML = `
+      ${sponsorItem.imagem ? `<img src="${sponsorItem.imagem}" alt="${sponsorItem.name}" style="max-width: 100px;"><br>` : ''}
+    `;
+    item.onclick = () => cycleToSponsor(currentSponsorIndex + i + 1);
+    sponsorGrid.appendChild(item);
+  }
+}
+
 
     function cycleSponsor() {
       const league = leaguesData.leagues[currentLeagueIndex];
